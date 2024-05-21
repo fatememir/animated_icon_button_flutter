@@ -1,39 +1,63 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+A Flutter package for creating an animated icon button with customizable icon, text, and colors for selected and unselected states
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+<image src="https://www.dropbox.com/scl/fi/8zkfkerrpnizafomrhfjo/animated_icon_button.gif?rlkey=p8x1f1a67rtcoulcavif3vek7&st=amnydtvy&dl=0" width=300>
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Installation
 
-## Features
+In the `pubspec.yaml` of your flutter project, add the following dependency:
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+```yaml
+dependencies:
+  flutter:
+    sdk:
+  animated_icon_button_flutter: any
+```
 
-## Getting started
+Import the package like this:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```dart
+  import 'package:animated_icon_button_flutter/animated_icon_button_flutter.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+create a AnimatedIconButton widget, and pass the required params:
 
 ```dart
-const like = 'sample';
+
+AnimatedIconButton(
+            text: 'Favorite',
+            iconData: Icons.star,
+          )
 ```
 
-## Additional information
+## Customization
+Customize the AnimatedIconButton widget with these parameters:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+/// This color appears after clicking the button
+/// Default is Color(0xFFFFD700).
+final Color selectedColor;
+
+/// This color appears After clicking again( the button appears disabled)
+/// Default is Color(0xFF708090).
+final Color unSelectedColor;
+
+/// The color of text in enable state
+/// Default is Color(0xFFFFD700).
+final Color textSelectedColor;
+
+/// The color of text in disable state
+/// Default is Color(0xFF708090).
+final Color textUnselectedColor;
+
+/// The color of icon in enable state
+/// Default is Color(0xFFFFD700).
+final Color iconSelectedColor;
+
+/// The color of icon in disable state
+/// Default is Color(0xFF708090).
+final Color iconUnselectedColor;
+
+```

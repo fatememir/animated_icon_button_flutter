@@ -37,29 +37,25 @@ class AnimatedButtonState extends State<AnimatedIconButton>
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-      backgroundColor: Colors.grey[200],
-      appBar: AppBar(
-        title: const Text('Animated icon button'),
-      ),
-      body: Center(
+    return  Center(
         child: Stack(
           alignment: Alignment.center,
           children: [
             GestureDetector(
               onTap: () {
-                buttonPressed();
-                setState(() {
-                  isFavorite = !isFavorite;
-                  isAnimating = true;
+                if (!isAnimating) {
+                  buttonPressed();
+                  setState(() {
+                    isFavorite = !isFavorite;
+                    isAnimating = true;
 
-                  Future.delayed(const Duration(milliseconds: 500), () {
-                    setState(() {
-                      isAnimating = false;
+                    Future.delayed(const Duration(milliseconds: 500), () {
+                      setState(() {
+                        isAnimating = false;
+                      });
                     });
                   });
-                });
+                }
               },
               child: Container(
                 width: MediaQuery.of(context).size.width / 3,
@@ -166,8 +162,7 @@ class AnimatedButtonState extends State<AnimatedIconButton>
               ),
           ],
         ),
-      ),
-    ));
+    );
   }
 
   void buttonPressed() {

@@ -1,7 +1,7 @@
 name: animated_icon_button_flutter
 description: "A Flutter package to show an animated icon button."
 version: 0.0.1
-homepage:
+homepage: https://github.com/fatememir/animated_icon_button_flutter
 
 environment:
   sdk: '>=3.2.3 <4.0.0'

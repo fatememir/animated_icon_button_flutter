@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+A Flutter package for creating an animated icon button with customizable icon, text, and colors for selected and unselected states.
