@@ -1,7 +1,7 @@
 A Flutter package for creating an animated icon button with customizable icon, text, and colors for selected and unselected states
 
 
-<image src="https://private-user-images.githubusercontent.com/52149746/332402435-4cfea0ea-dc46-473b-8ec0-fe2f4241dd43.gif" width=300>
+<image src="https://github.com/fatememir/images/assets/52149746/4cfea0ea-dc46-473b-8ec0-fe2f4241dd43" width=300>
 
 ## Installation
 
@@ -22,7 +22,7 @@ Import the package like this:
 
 ## Usage
 
-create a AnimatedIconButton widget, and pass the required params:
+create an AnimatedIconButton widget, and pass the required params:
 
 ```dart
 
